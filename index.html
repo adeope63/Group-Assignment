@@ -10,7 +10,18 @@
 </head>
 <body>
     <div id="app">
-
+        <main class="container">
+            <section>
+                <div class="paragraph">
+                    <p class="subject">Subject: {{lesson.subject}}</p>
+                    <p class="location">Location: {{lesson.location}}</p>
+                    <p class="price">Price: &#163{{lesson.price}}</p>
+                    <p class="space">Spaces: {{lesson.space}}</p>
+                    <img class="image" :src="lesson.imgURL" alt="">
+                    <button class="add" v-on:click="addToCart">Add to Cart</button>
+                </div>
+            </section>
+        </main>
     </div>
     
     <script>
