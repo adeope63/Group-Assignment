@@ -28,6 +28,27 @@
         const { createApp } = Vue
 
         createApp({
+            data() {
+                return {
+                    lesson: {
+                        subject: 'Math',
+                        location: "London",
+                        price: 100,
+                        imgURL: "./math.png",
+                        space: 5,
+                    }
+                }
+            },
+            methods: {
+                addToCart: function () {
+                    if (this.lesson.space > 0) {
+                        this.lesson.space -= 1
+                        console.log(this.lesson.space)
+                    } else {
+                        this.lesson.space = 0
+                    }
+                }
+            },
 
         }).mount('#app')
         </script>
